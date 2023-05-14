@@ -13,7 +13,9 @@ body {
   place-items: center;
   height: 100vh;
 
-  background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+  background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
 }
 
 main {
@@ -144,4 +146,16 @@ h1 {
   100% {
     transform: rotate(-1deg);
   }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
